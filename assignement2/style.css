@@ -1,0 +1,83 @@
+body{
+    background-color: black;
+}
+h1,h2,p,ul{
+    color: white;
+    font-family: Apple Chancery, cursive;
+    font-stretch: expanded;
+}
+
+/* The animation code */
+@keyframes example {
+    from {
+        color: black;
+        margin-top: 1px;
+        margin-right: 1px;
+    }
+    to {
+        color: white;
+        margin-top: 45px;
+        margin-right: 45px;
+
+    }
+}
+
+@keyframes black-to-white {
+    from{
+        color: black;
+    }
+    to{
+        color: white;
+    }
+}
+
+.my-name{
+    margin-top: 45px;
+    margin-right: 45px;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+.intro-p{
+    padding-right: 45px;
+    padding-left: 15px;
+}
+
+video {
+    width: inherit !important;
+    object-fit: fill;
+    min-height: 100vh;
+}
+ul{
+    list-style-type: none;
+}
+#big-name{
+    visibility: hidden;
+}
+
+#left-name{
+    position: relative;
+    text-align: center;
+    top: 35%;
+    animation-name: black-to-white;
+    animation-duration: 8s;
+}
+
+@media only screen and (max-width: 600px) {
+   #vid{
+       position: fixed;
+       right: 0;
+       bottom: 0;
+       min-width: 100%;
+       min-height: 100%;
+   }
+
+    #main-div{
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    #big-name{
+        visibility: visible;
+    }
+
+}
